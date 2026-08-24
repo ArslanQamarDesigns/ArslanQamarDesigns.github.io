@@ -356,3 +356,64 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
   }
 }
 ```
+/* VERSION 2.2 — STRONGER TYPOGRAPHY REFINEMENT */
+
+.hero h1 {
+  font-size: clamp(46px, 5.4vw, 78px) !important;
+}
+
+.intro-statement {
+  font-size: clamp(28px, 3vw, 40px) !important;
+}
+
+.section-heading-row h2,
+.services-content h2,
+.process-content h2 {
+  font-size: clamp(32px, 3.2vw, 44px) !important;
+}
+
+.contact h2 {
+  font-size: clamp(42px, 4.8vw, 62px) !important;
+}
+
+@media (max-width: 620px) {
+
+  .hero h1 {
+    font-size: clamp(38px, 10.5vw, 50px) !important;
+  }
+
+  .intro-statement {
+    font-size: clamp(24px, 7vw, 30px) !important;
+  }
+
+  .section-heading-row h2,
+  .services-content h2,
+  .process-content h2 {
+    font-size: clamp(28px, 7.5vw, 35px) !important;
+  }
+
+  .contact h2 {
+    font-size: clamp(36px, 9.5vw, 48px) !important;
+  }
+}
+
+@media (max-width: 390px) {
+
+  .hero h1 {
+    font-size: 40px !important;
+  }
+
+  .intro-statement {
+    font-size: 25px !important;
+  }
+
+  .section-heading-row h2,
+  .services-content h2,
+  .process-content h2 {
+    font-size: 29px !important;
+  }
+
+  .contact h2 {
+    font-size: 38px !important;
+  }
+}
