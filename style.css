@@ -139,11 +139,8 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 }
 @media(pointer:coarse){.cursor-dot,.cursor-ring{display:none}}
 ```css
-/* =========================================
-   VERSION 2.1 — NAVIGATION REFINEMENT
-   ========================================= */
+/* VERSION 2.1 — NAVIGATION REFINEMENT */
 
-/* Desktop navigation */
 .nav {
   font-size: 11px;
   gap: 28px;
@@ -157,23 +154,32 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 }
 
 .brand {
-  font-size: 11px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
-/* Availability indicator */
 .availability {
   font-size: 10px;
 }
 
-/* Tablet */
+
+/* TABLET */
+
 @media (max-width: 900px) {
   .nav {
     font-size: 10px;
     gap: 20px;
   }
+
+  .brand {
+    font-size: 14px;
+  }
 }
 
-/* Mobile */
+
+/* MOBILE */
+
 @media (max-width: 620px) {
   .nav {
     display: flex;
@@ -186,16 +192,26 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
     min-height: 38px;
   }
 
+  .brand {
+    font-size: 13px;
+    font-weight: 700;
+  }
+
   .availability {
     display: none;
   }
 }
 
-/* Very small phones */
+
+/* SMALL PHONES */
+
 @media (max-width: 390px) {
   .nav {
     font-size: 8px;
     gap: 7px;
   }
+
+  .brand {
+    font-size: 12px;
+  }
 }
-```
