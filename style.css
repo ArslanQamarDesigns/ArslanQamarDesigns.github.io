@@ -139,88 +139,88 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 }
 @media(pointer:coarse){.cursor-dot,.cursor-ring{display:none}}
 /* =========================================================
-   VERSION 3 — YELLOW SECTIONS REFINEMENT
-   Only Sections 1–7 from the approved reference
+   VERSION 3 — YELLOW SECTIONS
+   TARGETED REFINEMENT
+   Existing design preserved — no global redesign
    ========================================================= */
 
 
 /* =========================================================
    YELLOW 1 — THE APPROACH
-   More balanced, readable and visually intentional
    ========================================================= */
 
 .intro {
-  grid-template-columns: 0.55fr 1.55fr 0.9fr;
-  gap: clamp(30px, 5vw, 70px);
-  padding: clamp(80px, 8vw, 110px) 0;
+  grid-template-columns: .62fr 1.55fr .95fr;
+  column-gap: clamp(35px, 5vw, 70px);
+  padding: clamp(85px, 8vw, 115px) 0;
   align-items: center;
 }
 
+/* Text stays left aligned — only the text changes */
+.intro-statement,
+.intro-copy {
+  text-align: left;
+}
+
 .intro-statement {
-  max-width: 720px;
+  max-width: 680px;
   font-size: clamp(28px, 3.15vw, 44px);
   line-height: 1.04;
-  letter-spacing: -0.045em;
 }
 
 .intro-copy {
-  max-width: 360px;
+  max-width: 370px;
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 
 /* =========================================================
-   YELLOW 2 — SELECTED WORK / FEATURED EMAILS
-   Larger presentations, cleaner spacing
+   YELLOW 2 — SELECTED WORK
+   Larger featured emails + open project information
    ========================================================= */
 
 .work {
-  padding-top: clamp(80px, 8vw, 110px);
+  padding-top: clamp(85px, 8vw, 115px);
 }
 
+/* Keep Selected Work introduction balanced */
 .section-heading-row {
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
-  margin: 22px 0 75px;
+  margin: 20px 0 78px;
+  gap: 35px;
 }
 
 .section-heading-row h2 {
-  max-width: 760px;
-  font-size: clamp(38px, 4.2vw, 56px);
-  line-height: 1;
+  font-size: clamp(38px, 4.1vw, 54px);
+  max-width: 720px;
+  line-height: .98;
 }
 
 .section-heading-row p {
-  max-width: 500px;
+  max-width: 330px;
   font-size: 13px;
   line-height: 1.65;
 }
 
 
-/* Featured project layout */
+/* Featured project spacing */
 
 .project {
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: clamp(45px, 7vw, 105px);
-  padding-bottom: clamp(95px, 10vw, 145px);
+  grid-template-columns: minmax(250px,.82fr) minmax(420px,1.18fr);
+  column-gap: clamp(45px, 7vw, 100px);
+  padding-bottom: clamp(100px, 10vw, 145px);
 }
 
-.project:nth-of-type(even) {
-  grid-template-columns: 1.2fr 0.8fr;
-}
-
-
-/* Keep project information open — no card/rectangle */
+/*
+   The alternating structure already exists in the HTML.
+   Keep it — only enlarge the presentation.
+*/
 
 .project-meta {
   background: transparent;
-  border: 0;
+  border: none;
   padding: 0;
-  max-width: 390px;
+  max-width: 410px;
 }
 
 .project-meta > span {
@@ -229,24 +229,20 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 }
 
 .project-meta h3 {
-  font-size: clamp(30px, 3vw, 40px);
+  font-size: clamp(32px, 3vw, 42px);
   line-height: 1;
-  margin: 12px 0 16px;
+  margin: 12px 0 18px;
 }
 
 .project-meta p {
-  max-width: 390px;
+  max-width: 400px;
   font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 25px;
-}
-
-.text-link {
-  font-size: 9px;
+  line-height: 1.75;
+  margin-bottom: 26px;
 }
 
 
-/* Taller featured emails */
+/* Make featured email previews noticeably taller */
 
 .email-frame {
   width: 100%;
@@ -254,38 +250,41 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 }
 
 .email-frame .mock-email {
-  min-height: clamp(390px, 34vw, 510px);
+  min-height: clamp(430px, 38vw, 560px);
 }
+
+
+/* Keep the email typography proportional */
 
 .email-frame .mock-email strong {
   font-size: clamp(38px, 4vw, 66px);
 }
 
 .email-frame .alinee strong b {
-  font-size: clamp(58px, 5.2vw, 88px);
+  font-size: clamp(60px, 5.2vw, 90px);
 }
 
 .email-frame .happy strong {
-  font-size: clamp(44px, 4.2vw, 70px);
+  font-size: clamp(45px, 4.2vw, 72px);
 }
 
 .email-frame .frag strong {
-  font-size: clamp(48px, 4.7vw, 76px);
+  font-size: clamp(50px, 4.7vw, 78px);
 }
 
 
 /* =========================================================
    YELLOW 3 — MORE CAMPAIGNS
-   Larger cards + actual separation between emails
+   Visible space between individual emails
    ========================================================= */
 
 .gallery {
-  padding: 25px 0 clamp(90px, 9vw, 125px);
+  padding-top: 25px;
+  padding-bottom: clamp(95px, 9vw, 130px);
 }
 
 .gallery-intro {
-  margin-bottom: 30px;
-  align-items: center;
+  margin-bottom: 32px;
 }
 
 .gallery-intro span {
@@ -296,13 +295,17 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
   font-size: 12px;
 }
 
+
+/* The important change: actual separation between cards */
+
 .gallery-grid {
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(16px, 1.8vw, 24px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  column-gap: clamp(18px, 2vw, 28px);
+  row-gap: clamp(22px, 2.4vw, 32px);
 }
 
 .mini-email {
-  height: clamp(150px, 12vw, 175px);
+  height: clamp(155px, 13vw, 185px);
   padding: 17px;
 }
 
@@ -311,25 +314,23 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 }
 
 .mini-email b {
-  font-size: clamp(15px, 1.25vw, 18px);
-  line-height: 1.08;
+  font-size: clamp(15px, 1.3vw, 18px);
 }
 
 
 /* =========================================================
    YELLOW 4 — WHAT I DO
-   Inspired by the second reference image
+   Larger, cleaner presentation
    ========================================================= */
 
 .services {
-  grid-template-columns: 0.5fr 1.5fr;
-  gap: clamp(45px, 7vw, 105px);
+  grid-template-columns: .5fr 1.5fr;
+  column-gap: clamp(45px, 7vw, 105px);
   padding: clamp(105px, 10vw, 145px) 0;
 }
 
-.services-content {
-  max-width: 850px;
-}
+
+/* Larger heading */
 
 .services-content h2 {
   max-width: 760px;
@@ -338,10 +339,13 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
   margin-bottom: 55px;
 }
 
+
+/* Make service rows more substantial */
+
 .service-row {
-  grid-template-columns: 55px 1fr 1.65fr;
+  grid-template-columns: 55px 1fr 1.55fr;
   gap: 25px;
-  padding: 27px 0;
+  padding: 28px 0;
 }
 
 .service-row span {
@@ -354,24 +358,22 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 
 .service-row p {
   font-size: 12px;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 
 /* =========================================================
    YELLOW 5 — PROCESS
-   Inspired by the second reference image
    ========================================================= */
 
 .process {
-  grid-template-columns: 0.5fr 1.5fr;
-  gap: clamp(45px, 7vw, 105px);
+  grid-template-columns: .5fr 1.5fr;
+  column-gap: clamp(45px, 7vw, 105px);
   padding: clamp(105px, 10vw, 145px) 0;
 }
 
-.process-content {
-  max-width: 850px;
-}
+
+/* Larger process heading */
 
 .process-content h2 {
   font-size: clamp(40px, 4.4vw, 60px);
@@ -379,17 +381,20 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
   margin-bottom: 60px;
 }
 
+
+/* Larger step areas */
+
 .steps {
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(18px, 2.5vw, 35px);
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  column-gap: clamp(22px, 2.8vw, 38px);
 }
 
 .steps > div {
-  padding-top: 17px;
+  padding-top: 18px;
 }
 
 .steps b {
-  font-size: 12px;
+  font-size: 13px;
   margin-bottom: 20px;
 }
 
@@ -399,22 +404,24 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 
 .steps p {
   font-size: 11px;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 
 /* =========================================================
    YELLOW 6 — ABOUT
-   Image left / content right
-   Inspired by second reference
+   Image positioned toward the left
    ========================================================= */
 
 .about {
-  grid-template-columns: 0.45fr 0.95fr 1.15fr;
-  gap: clamp(40px, 6vw, 90px);
-  padding: clamp(110px, 11vw, 160px) 0;
+  grid-template-columns: .25fr 1fr 1.15fr;
+  column-gap: clamp(35px, 5vw, 75px);
+  padding: clamp(110px, 11vw, 155px) 0;
   align-items: center;
 }
+
+
+/* Move the actual image area toward the left */
 
 .about-visual {
   grid-column: 2;
@@ -424,11 +431,17 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
   grid-column: 3;
 }
 
+
+/* Give the visual more presence */
+
 .portrait-placeholder {
   width: 100%;
-  max-width: 420px;
+  max-width: 430px;
   aspect-ratio: 4 / 5;
 }
+
+
+/* Larger About heading and text */
 
 .about-copy h2 {
   max-width: 560px;
@@ -443,25 +456,23 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
   line-height: 1.75;
 }
 
-.skill-tags {
-  margin-top: 28px;
-}
-
 
 /* =========================================================
    YELLOW 7 — WHAT MATTERS
-   Larger and more readable
    ========================================================= */
 
 .values {
-  grid-template-columns: 0.5fr 1.5fr;
-  gap: clamp(45px, 7vw, 105px);
-  padding: clamp(85px, 9vw, 125px) 0;
+  grid-template-columns: .5fr 1.5fr;
+  column-gap: clamp(45px, 7vw, 105px);
+  padding: clamp(90px, 9vw, 125px) 0;
 }
 
+
+/* Larger three-column presentation */
+
 .value-grid {
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(30px, 4vw, 60px);
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  column-gap: clamp(30px, 4vw, 60px);
 }
 
 .value-grid b {
@@ -469,81 +480,69 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 }
 
 .value-grid h3 {
-  font-size: clamp(20px, 1.7vw, 25px);
+  font-size: clamp(21px, 1.8vw, 26px);
   margin: 14px 0 10px;
 }
 
 .value-grid p {
   font-size: 11px;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 
 /* =========================================================
-   MOBILE — ALL 7 YELLOW SECTIONS
+   RESPONSIVE — TABLET
    ========================================================= */
 
 @media (max-width: 900px) {
 
   /* YELLOW 1 */
+
   .intro {
     grid-template-columns: 1fr 2fr;
-    gap: 30px;
-  }
-
-  .intro-statement {
-    font-size: clamp(30px, 5vw, 42px);
-  }
-
-  .intro-copy {
-    font-size: 13px;
+    column-gap: 30px;
   }
 
 
   /* YELLOW 2 */
-  .project,
+
+  .project {
+    grid-template-columns: 1fr;
+    row-gap: 38px;
+  }
+
   .project:nth-of-type(even) {
     grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .project:nth-of-type(even) .email-frame {
-    order: 2;
-  }
-
-  .project:nth-of-type(even) .project-meta {
-    order: 1;
   }
 
   .email-frame .mock-email {
-    min-height: 420px;
+    min-height: 430px;
   }
 
 
   /* YELLOW 3 */
+
   .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    column-gap: 18px;
+    row-gap: 22px;
   }
 
 
   /* YELLOW 4 + 5 */
+
   .services,
   .process {
     grid-template-columns: 1fr;
-    gap: 45px;
-  }
-
-  .services-content,
-  .process-content {
-    max-width: none;
+    row-gap: 50px;
   }
 
 
   /* YELLOW 6 */
+
   .about {
     grid-template-columns: 1fr 1.2fr;
-    gap: 40px;
+    column-gap: 40px;
   }
 
   .about > .section-kicker {
@@ -560,19 +559,25 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 
 
   /* YELLOW 7 */
+
   .values {
     grid-template-columns: 1fr;
-    gap: 40px;
+    row-gap: 45px;
   }
 }
 
 
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
 @media (max-width: 620px) {
 
   /* YELLOW 1 */
+
   .intro {
     grid-template-columns: 1fr;
-    gap: 24px;
+    row-gap: 24px;
     padding: 70px 0;
   }
 
@@ -587,24 +592,23 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 
 
   /* YELLOW 2 */
-  .work {
-    padding-top: 70px;
-  }
 
   .section-heading-row {
+    display: block;
     margin-bottom: 50px;
   }
 
   .section-heading-row h2 {
     font-size: clamp(34px, 9vw, 43px);
+    margin-bottom: 18px;
   }
 
   .project {
-    padding-bottom: 75px;
+    padding-bottom: 80px;
   }
 
   .project-meta h3 {
-    font-size: 30px;
+    font-size: 31px;
   }
 
   .project-meta p {
@@ -612,7 +616,7 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
   }
 
   .email-frame .mock-email {
-    min-height: 310px;
+    min-height: 340px;
   }
 
   .email-frame .mock-email strong {
@@ -633,13 +637,11 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 
 
   /* YELLOW 3 */
-  .gallery {
-    padding-bottom: 75px;
-  }
 
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    column-gap: 13px;
+    row-gap: 16px;
   }
 
   .mini-email {
@@ -653,6 +655,7 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 
 
   /* YELLOW 4 */
+
   .services {
     padding: 80px 0;
   }
@@ -665,7 +668,7 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
   .service-row {
     grid-template-columns: 35px 1fr;
     gap: 12px;
-    padding: 21px 0;
+    padding: 23px 0;
   }
 
   .service-row p {
@@ -675,6 +678,7 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 
 
   /* YELLOW 5 */
+
   .process {
     padding: 80px 0;
   }
@@ -686,7 +690,7 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 
   .steps {
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 22px;
   }
 
   .steps p {
@@ -695,6 +699,7 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 
 
   /* YELLOW 6 */
+
   .about {
     grid-template-columns: 1fr;
     padding: 85px 0;
@@ -728,13 +733,14 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 
 
   /* YELLOW 7 */
+
   .values {
     padding: 70px 0;
   }
 
   .value-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    row-gap: 30px;
   }
 
   .value-grid h3 {
@@ -743,29 +749,5 @@ h2{font-size:clamp(32px,4vw,52px);line-height:.98;letter-spacing:-.05em;margin:0
 
   .value-grid p {
     font-size: 11px;
-  }
-}
-
-
-@media (max-width: 390px) {
-
-  .email-frame .mock-email {
-    min-height: 275px;
-  }
-
-  .gallery-grid {
-    gap: 10px;
-  }
-
-  .mini-email {
-    height: 115px;
-  }
-
-  .steps {
-    grid-template-columns: 1fr;
-  }
-
-  .about-copy h2 {
-    font-size: 38px;
   }
 }
